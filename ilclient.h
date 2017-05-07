@@ -108,7 +108,7 @@ typedef void (*ILCLIENT_CALLBACK_T)(void *userdata, COMPONENT_T *comp, OMX_U32 d
  *
  * @return Void.
  ***********************************************************/
-typedef void (*ILCLIENT_BUFFER_CALLBACK_T)(void *data, COMPONENT_T *comp);
+typedef void (*ILCLIENT_BUFFER_CALLBACK_T)(void *data, COMPONENT_T *comp, OMX_BUFFERHEADERTYPE *buf);
 
 
 /**

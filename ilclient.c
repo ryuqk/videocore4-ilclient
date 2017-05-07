@@ -1677,7 +1677,7 @@ static OMX_ERRORTYPE ilclient_empty_buffer_done(OMX_IN OMX_HANDLETYPE hComponent
    vcos_event_flags_set(&st->event, ILCLIENT_EMPTY_BUFFER_DONE, VCOS_OR);
 
    if (st->client->empty_buffer_done_callback)
-      st->client->empty_buffer_done_callback(st->client->empty_buffer_done_callback_data, st);
+      st->client->empty_buffer_done_callback(st->client->empty_buffer_done_callback_data, st, pBuffer);
 
    return OMX_ErrorNone;
 }
@@ -1733,7 +1733,7 @@ static OMX_ERRORTYPE ilclient_fill_buffer_done(OMX_OUT OMX_HANDLETYPE hComponent
    vcos_event_flags_set(&st->event, ILCLIENT_FILL_BUFFER_DONE, VCOS_OR);
 
    if (st->client->fill_buffer_done_callback)
-      st->client->fill_buffer_done_callback(st->client->fill_buffer_done_callback_data, st);
+      st->client->fill_buffer_done_callback(st->client->fill_buffer_done_callback_data, st, pBuffer);
 
    return OMX_ErrorNone;
 }
